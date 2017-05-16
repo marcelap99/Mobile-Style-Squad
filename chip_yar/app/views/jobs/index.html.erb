@@ -1,0 +1,37 @@
+
+<h1>This is the Jobs View page where you can see all the pending work orders</h1>
+
+<ul>
+
+  <% @job.each do |job| %>
+
+      <li>
+    <strong>Job Description</strong>: <%= job.Description %>
+
+    <strong>Job Origin</strong>: <%= job.Job_Origin %>
+
+    <strong>Job Destination</strong>: <%= job.Job_Destination %>
+
+    <strong>Num Containers Transported</strong>: <%= job.Num_Containers_Transported %>
+
+    <strong>Job Cost</strong>: <%= job.Job_Cost %>
+
+    <strong>Work Order Number</strong>: <%= job.id %>
+
+    <strong>Boats Asigned to Job</strong>: <%job.boats.each do |b|%>
+
+    <strong>Boat Name</strong>: <%=b.Boat_Name%>
+
+    <% end %>
+
+    <%= link_to("Show", job_path(job)) %>
+
+    <%= link_to("Edit Job", edit_job_path(job)) %>
+
+    <%= link_to("Delete", job_path(job), method: :delete) %>
+
+    </li>
+
+  <% end %>
+
+</ul>

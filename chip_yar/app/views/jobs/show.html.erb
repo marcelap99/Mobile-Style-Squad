@@ -1,0 +1,23 @@
+<h1>This is the Jobs Show page where you can see a pending work order</h1>
+
+
+<strong>Description</strong>: <%= @job.Description %>
+
+<strong>Job Origin</strong>: <%= @job.Job_Origin %>
+
+
+<strong>Job Destination</strong>: <%= @job.Job_Destination %>
+
+<strong>Num Containers Transported</strong>: <%= @job.Num_Containers_Transported %>
+
+
+<strong>Cost Of Job</strong>: <%= @job.Job_Cost %>
+
+<strong>Work Order Number</strong>: <%= @job.id %>
+
+<% @boats.each do |b| %>
+  <%= b.Boat_Name  %>
+
+  <%= link_to 'Associate to Job', "/jobs/#{@job.id}/boats/#{b.id}", method: :post %>
+
+<% end %>

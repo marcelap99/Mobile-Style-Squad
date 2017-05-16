@@ -1,0 +1,24 @@
+<h1>Edit Form</h1>
+
+
+  <%= form_for @boat do |form| %>
+
+  <%= form.file_field :avatar %>
+
+  <%= form.label :Boat_Name %>
+  <%= form.text_field :Boat_Name %>
+
+  <%= form.label :Num_Containers %>
+  <%= form.text_field :Num_Containers %>
+
+  <%= form.label :Current_Location %>
+
+  <%= form.select :Current_Location, [["Italy"], ["Spain"],["Greece"], ["England"], ["Germany"]] %>
+
+  <%= form.label :Boat_Origin %>
+
+  <%= form.select :Boat_Origin, [["Madagarscar"], ["Bolivia"],["Egypt"], ["Lebanon"], ["Israel"]] %>
+
+  <%= form.submit %>
+
+  <% end %>

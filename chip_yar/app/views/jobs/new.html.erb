@@ -1,0 +1,23 @@
+
+
+<h1>This is the Jobs page where you can create a new work order.</h1>
+
+  <%= form_for @job do |form| %>
+  <%= form.label :Description %>
+  <%= form.text_field :Description, :minlength => 50, :maxlength => 100 %>
+
+  <%= form.label :Job_Origin %>
+  <%= form.select :Job_Origin, [["Colombia"], ["Denmark"],["New Zealand"],["Switzerland"], ["Panama"]] %>
+
+  <%= form.label :Job_Destination %>
+  <%= form.select :Job_Destination, [["Japan"], ["Australia"],["Mexico"], ["Iceland"], ["Canada"]] %>
+
+  <%= form.label :Num_Containers_Transported %>
+  <%= form.text_field :Num_Containers_Transported %>
+
+  <%= form.label :Job_Cost %>
+  <%= form.text_field :Job_Cost %>
+
+  <%= form.submit %>
+
+  <% end %>

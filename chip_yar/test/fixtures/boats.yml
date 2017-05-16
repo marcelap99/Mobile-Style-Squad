@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Boat_Name: MyString
+  Num_Containers: 1.5
+  Current_Location: MyString
+  Boat_Origin: MyString
+
+two:
+  Boat_Name: MyString
+  Num_Containers: 1.5
+  Current_Location: MyString
+  Boat_Origin: MyString

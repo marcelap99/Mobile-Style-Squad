@@ -1,0 +1,33 @@
+<h1>This is the Boats View page where you can see all the boats</h1>
+
+<ul>
+
+  <% @boats.each do |boat| %>
+
+    <li>
+
+    <%= image_tag boat.avatar.url(:thumb) %>
+
+    <strong>Boat_Name</strong>: <%= boat.Boat_Name %>
+
+
+    <strong>Num_Containers</strong>: <%= boat.Num_Containers %>
+
+
+    <strong>Current_Location</strong>: <%= boat.Current_Location %>
+
+
+    <strong>Boat_Origin</strong>: <%= boat.Boat_Origin %>
+
+    <%= link_to("Show", boat_path(boat)) %>
+
+    <%= link_to("Edit Boat", edit_boat_path(boat)) %>
+
+    <%= link_to("Delete", boat_path(boat), method: :delete) %>
+
+
+    </li>
+
+  <% end %>
+
+</ul>
